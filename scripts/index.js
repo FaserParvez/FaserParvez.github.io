@@ -1,11 +1,9 @@
 $(window).load(function() {
     // fade in page transitions
     $(".content").fadeIn('slow');
-    updateHeight();
 });
 
 $(window).resize(function(){
-    updateHeight();
 });
 
 $(document).ready(function() {
@@ -18,10 +16,6 @@ $(document).ready(function() {
         $("#navigation").css({'font-size': '12px'});
         $("#text").css({'padding-bottom': '6%'});
     }
-
-    // sets height of wrapper to fixed divs
-    updateHeight();
-
     // activate mosaic
     $('.bar').mosaic({
          animation : 'slide'
@@ -96,21 +90,6 @@ $(document).ready(function() {
         $('[data-scroll-speed]').moveIt();
     });
 });
-
-var updateHeight = function(){
-    // TODO: fix height calculations
-
-    // Loop through elements children to find & set the biggest height
-    // $(".wrapper div").each(function(){
-    // // If this elements height is bigger than the biggestHeight
-    //     console.log($(this));
-    //     console.log($(this).height());
-    //     biggestHeight += $(this).height();
-    // });
-
-    // Set the container height
-    // $(".wrapper").height(1750);
-}
 
 window.mobilecheck = function() {
   var check = false;
