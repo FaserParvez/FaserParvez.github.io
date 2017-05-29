@@ -3,9 +3,6 @@ $(window).load(function() {
     $(".content").fadeIn('slow');
 });
 
-$(window).resize(function(){
-});
-
 $(document).ready(function() {
     // check mobile
     if(mobilecheck()){
